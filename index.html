@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071326">
+<title>Mission NDA 1 2027 — Roadmap Tracker</title>
+<style>
+:root{--bg:#061226;--panel:#0b1b33;--panel2:#102440;--line:#203d60;--text:#edf5ff;--muted:#a9bdd6;--blue:#31a8ff;--green:#2ee59d;--purple:#bd75ff;--yellow:#ffd34e;--red:#ff7777}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#10284a 0,#061226 55%);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{padding:24px 16px 18px;border-bottom:1px solid var(--line);background:#061226eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.wrap{max-width:1240px;margin:auto}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.brand h1{font-size:clamp(23px,4vw,38px);margin:0;letter-spacing:.2px}.brand h1 span{color:var(--yellow)}.brand p{color:var(--muted);margin:6px 0 0}.tag{border:1px solid #876d27;background:#29250f;color:var(--yellow);border-radius:12px;padding:10px 13px;font-weight:700}
+main{max-width:1240px;margin:auto;padding:18px 14px 44px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.stat,.panel,.subject-card{background:linear-gradient(145deg,#0d203b,#09182d);border:1px solid var(--line);border-radius:16px;padding:15px}.stat small{color:var(--muted);display:block}.stat strong{display:block;font-size:26px;margin:4px 0}.bar{height:8px;background:#1c304b;border-radius:99px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--green));border-radius:99px;transition:width .2s}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0}.toolbar input,.toolbar select,.toolbar button,.btn{background:#0c2039;color:var(--text);border:1px solid #294867;border-radius:10px;padding:10px 12px;font:inherit}.toolbar input{flex:1;min-width:180px}.toolbar button,.btn{cursor:pointer;font-weight:700}.toolbar button:hover,.btn:hover{border-color:var(--yellow)}.toolbar .reset{color:#ffb7b7;border-color:#75404b}
+.subjects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.subject-card{padding:0;overflow:hidden}.subject-head{padding:15px 16px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}.subject-head h2{margin:0;font-size:21px}.subject-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.subject-head .percent{font-size:20px;font-weight:800}.physics .subject-head{border-top:4px solid var(--blue)}.chemistry .subject-head{border-top:4px solid var(--green)}.biology .subject-head{border-top:4px solid var(--purple)}.english .subject-head{border-top:4px solid var(--yellow)}.physics .percent{color:var(--blue)}.chemistry .percent{color:var(--green)}.biology .percent{color:var(--purple)}.english .percent{color:var(--yellow)}
+.phase{border-bottom:1px solid #1b3552;padding:12px 15px}.phase:last-child{border-bottom:0}.phase-title{display:flex;align-items:flex-start;gap:9px}.phase-num{font-size:11px;font-weight:800;border-radius:7px;padding:4px 7px;white-space:nowrap;background:#132b48;color:#d8eaff}.physics .phase-num{background:#10335a;color:#8bd0ff}.chemistry .phase-num{background:#103c35;color:#80ffd0}.biology .phase-num{background:#30204c;color:#d8b1ff}.english .phase-num{background:#40351a;color:#ffe58b}.phase h3{font-size:14px;margin:2px 0 0}.topic-list{list-style:none;padding:8px 0 0 3px;margin:0;display:grid;gap:7px}.topic{display:flex;align-items:flex-start;gap:9px;color:#d7e4f4;font-size:13px}.topic input{accent-color:var(--green);width:16px;height:16px;flex:0 0 16px;margin:1px 0 0;cursor:pointer}.topic.done span{text-decoration:line-through;color:#7fa096}.empty{color:var(--muted);padding:22px;text-align:center}.bottom-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:16px}.panel h2{margin:0 0 10px;font-size:18px}.panel p{color:var(--muted);margin:4px 0}.daily-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.field{display:grid;gap:5px;color:var(--muted);font-size:12px}.field input,.field textarea,.field select{width:100%;background:#06162a;border:1px solid #294867;border-radius:9px;padding:10px;color:var(--text);font:inherit}.field textarea{resize:vertical;min-height:68px}.save-note{font-size:12px;color:var(--green);margin-top:8px}.week-list{display:grid;gap:9px}.week{display:flex;gap:10px;align-items:flex-start;background:#08182b;border:1px solid #1c3653;border-radius:10px;padding:10px}.week input{accent-color:var(--yellow);margin-top:3px}.week strong{display:block}.week small{color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:12px;padding:24px 10px}
+@media(max-width:760px){header{position:static}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.subjects{grid-template-columns:1fr}.bottom-grid{grid-template-columns:1fr}.stat strong{font-size:23px}.brand p{max-width:34ch}.subject-head h2{font-size:19px}}
+@media(min-width:1100px){.subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><div class="brand"><h1>MISSION <span>NDA 1 2027</span></h1><p>Foundation strong → Concepts clear → Practice sharp → Selection sure</p></div><div class="tag">✦ 6-WEEK ROADMAP</div></div></header>
+<main>
+<section class="stats" aria-label="Progress summary">
+ <div class="stat"><small>Overall completion</small><strong id="overallPct">0%</strong><div class="bar"><i id="overallBar"></i></div></div>
+ <div class="stat"><small>Topics completed</small><strong id="doneCount">0 / 0</strong><small id="remaining">Keep moving, one topic at a time.</small></div>
+ <div class="stat"><small>Strongest subject</small><strong id="strongest">—</strong><small>Based on checked topics</small></div>
+ <div class="stat"><small>Today's study</small><strong><span id="todayMins">0</span> min</strong><small>Log your focused study time below</small></div>
+</section>
+<div class="toolbar">
+ <input id="search" type="search" placeholder="Search a topic, e.g. pressure, osmosis, nouns…" aria-label="Search topics">
+ <select id="subjectFilter" aria-label="Filter subject"><option value="all">All subjects</option><option value="physics">Physics</option><option value="chemistry">Chemistry</option><option value="biology">Biology</option><option value="english">English</option></select>
+ <select id="statusFilter" aria-label="Filter completion"><option value="all">All topics</option><option value="pending">Pending only</option><option value="done">Completed only</option></select>
+ <button id="expandBtn">Expand all</button><button id="exportBtn">Export progress</button><button id="importBtn">Import</button><input id="importFile" type="file" accept="application/json" hidden>
+</div>
+<div class="subjects" id="subjects"></div>
+<div class="bottom-grid">
+ <section class="panel"><h2>📅 Daily Mission Log</h2><p>Progress is saved in this browser on this device.</p>
+  <div class="daily-grid" style="margin-top:12px">
+   <label class="field">Date<input id="logDate" type="date"></label>
+   <label class="field">Focused study (minutes)<input id="logMinutes" type="number" min="0" max="1440" placeholder="e.g. 120"></label>
+   <label class="field">Questions solved<input id="logQuestions" type="number" min="0" placeholder="e.g. 15"></label>
+   <label class="field">Today's subject<select id="logSubject"><option>Physics</option><option>Chemistry</option><option>Biology</option><option>English</option><option>Revision / Test</option></select></label>
+   <label class="field" style="grid-column:1/-1">Mistakes / weak topics<textarea id="logWeak" placeholder="What felt difficult today?"></textarea></label>
+   <label class="field" style="grid-column:1/-1">Today's note<textarea id="logNote" placeholder="What did you learn or improve?"></textarea></label>
+  </div><button class="btn" id="saveLog" style="margin-top:10px">Save today's log</button><div class="save-note" id="logSaved" aria-live="polite"></div>
+ </section>
+ <section class="panel"><h2>🗓️ Six-Week Focus</h2><p>Tick each week when its planned focus/revision is complete.</p><div class="week-list" id="weeks" style="margin-top:12px"></div>
+  <div style="margin-top:15px"><h2>🎯 Mission rules</h2><p>• Concepts → why/how questions → practice → mistake analysis.</p><p>• Weekly revision; keep a formula sheet.</p><p>• A tick means studied; tests and revision still matter.</p></div>
+ </section>
+</div>
+</main>
+<footer>Small steps daily = big results. Your roadmap, your pace. Progress stays on this device unless you export it.</footer>
+<script>
+const roadmap = [
+{key:'physics',name:'PHYSICS',phases:[
+['Physical Quantities & Measurements','SI units, dimensions, errors, significant figures','Basic numericals'],
+['Kinematics (Motion in 1D & 2D)','Distance, displacement, speed, velocity, acceleration','Equations of motion, graphs'],
+['Force, Laws of Motion & Friction',"Newton's laws, friction, normal reaction",'Applications & numericals'],
+['Work, Energy & Power','Work, KE, PE, power, energy conservation','Inclined plane, pulley, block, energy problems'],
+['Momentum & Collision','Impulse, momentum conservation','Elastic & inelastic collision'],
+['Rotational Motion','Angular velocity, acceleration, torque','Moment of inertia, rolling motion'],
+['Gravitation',"Newton's law, g, satellites, Kepler's laws",'Orbital motion basics'],
+['Thermal Properties of Matter','Heat, temperature, expansion, specific heat','Ideal gas basics'],
+['Sound','Waves, velocity of sound, loudness, pitch','Doppler effect'],
+['Light','Reflection, refraction, lenses, mirrors','Optical instruments'],
+['Electricity & Magnetism','Current, voltage, resistance, circuits','Magnetic effects, EMI, AC basics']
+]},
+{key:'chemistry',name:'CHEMISTRY',phases:[
+['Basic Concepts & Matter','Matter, states, properties, pure substances','Mixtures, basic ideas'],
+['Atomic Structure','Atom, subatomic particles, Bohr model','Electron configuration'],
+['Periodic Table & Chemical Bonding','Periodic trends, valency, ionic/covalent bonds','Molecular structure'],
+['Chemical Reactions & Equations','Types of reactions, balancing','Oxidation & reduction'],
+['States of Matter & Thermodynamics','3 states, phase changes, latent heat','Heat transfer, pressure (P = F/A), Pa'],
+['Thermochemistry','Exothermic/endothermic, enthalpy','Calorimetry, Hess’s law (basic)'],
+['Solutions','Concentration, molarity, molality','Colligative properties (basic)'],
+['Equilibrium','Chemical equilibrium, Kc, Kp',"Le Chatelier's principle"],
+['Acids, Bases & Salts','pH, indicators, buffers','Salt hydrolysis (basic)'],
+['Metals & Non-metals','Properties, reactions, displacement','Corrosion, alloys'],
+['Organic Chemistry','Hydrocarbons, functional groups','Alkanes, alkenes, alcohols, etc. (basic)'],
+['Environmental Chemistry','Pollution, green chemistry, ozone','Water, carbon cycle (basic)']
+]},
+{key:'biology',name:'BIOLOGY',phases:[
+['Cell: The Unit of Life','Cell structure, organelles, functions','Nucleus, nucleolus, cell division (basic)'],
+['Biomolecules','Carbohydrates, proteins, lipids, vitamins','Enzymes (basic)'],
+['Plant Physiology','Photosynthesis, respiration','Plant growth & hormones (basic)'],
+['Human Physiology — Digestion','Digestive system, enzymes','Absorption, assimilation'],
+['Human Physiology — Circulation','Heart, blood, blood vessels','Double circulation'],
+['Human Physiology — Respiration','Lungs, breathing mechanism','Gas exchange'],
+['Human Physiology — Excretion','Kidneys, nephrons, urine formation','Water & mineral balance'],
+['Plant Kingdom','Algae, fungi, bryophytes, pteridophytes','Gymnosperms, angiosperms'],
+['Animal Kingdom','Invertebrates & vertebrates','Key features & examples'],
+['Genetics & Evolution','DNA, RNA, inheritance',"Mendel's laws, evolution (basic)"],
+['Ecology & Environment','Ecosystems, food chains, biodiversity','Pollution, conservation']
+]},
+{key:'english',name:'ENGLISH',phases:[
+['Nouns (Parts of Speech)','Types: common, proper, collective, etc.','Singular & plural, gender'],
+['Pronouns','Types: personal, relative, reflexive, etc.','Uses & agreement'],
+['Adjectives','Types, forms, position','Degrees of comparison'],
+['Verbs','Kinds of verbs, tenses (present, past, future)','Helping & modal verbs'],
+['Adverbs','Types: manner, time, place, frequency','Degrees of comparison'],
+['Prepositions','Types: time, place, direction, etc.','Common usage'],
+['Conjunctions','Types: coordinating, subordinating','Uses & examples'],
+['Articles','Definite & indefinite','Rules & exceptions'],
+['Sentence Structure','Simple, compound, complex','Assertive, interrogative, imperative, exclamatory'],
+['Tenses (in Depth)','All tenses with usage & examples','Time expressions, tense consistency'],
+['Voice & Narration','Active/passive voice','Direct/indirect speech'],
+['Grammar + Vocabulary + Comprehension','Cloze test, error spotting, sentence correction','Reading comprehension, synonyms/antonyms']
+]}];
+const weeks=[
+['Week 1','Physics Phases 1–2 + Chemistry 1–2 + Biology 1–2 + English 1–2'],
+['Week 2','Physics 3–4 + Chemistry 3–5 + Biology 3–4 + English 3–5'],
+['Week 3','Physics 5–7 + Chemistry 6–8 + Biology 5–7 + English 6–8'],
+['Week 4','Physics 8–9 + Chemistry 9–10 + Biology 8–9 + English 9–10'],
+['Week 5','Physics 10–11 + Chemistry 11–12 + Biology 10–11 + English 11–12'],
+['Week 6','Full revision + PYQs + formula sheet + weak topics + mock tests']
+];
+const STORE='missionNDA2027.v1';
+let state=loadState(), expanded=true;
+function loadState(){try{return JSON.parse(localStorage.getItem(STORE))||{topics:{},logs:{},weeks:{}}}catch(e){return{topics:{},logs:{},weeks:{}}}}
+function persist(){localStorage.setItem(STORE,JSON.stringify(state));renderStats()}
+function allTopics(){let a=[];roadmap.forEach(s=>s.phases.forEach((p,pi)=>p.slice(1).forEach((t,ti)=>a.push({id:`${s.key}-${pi}-${ti}`,subject:s.key,phase:pi,title:p[0],topic:t})))) ;return a}
+function render(){const root=document.getElementById('subjects'),q=document.getElementById('search').value.trim().toLowerCase(),sf=document.getElementById('subjectFilter').value,st=document.getElementById('statusFilter').value;root.innerHTML='';
+ roadmap.forEach(s=>{if(sf!=='all'&&sf!==s.key)return;const card=document.createElement('section');card.className='subject-card '+s.key;let phasesHtml='';
+ s.phases.forEach((p,pi)=>{const items=p.slice(1).map((t,ti)=>({t,id:`${s.key}-${pi}-${ti}`})).filter(x=>(!q||(p[0]+' '+x.t+' '+s.name).toLowerCase().includes(q))&&(st==='all'||(st==='done')===!!state.topics[x.id]));if(!items.length)return;
+ phasesHtml+=`<details class="phase" ${expanded?'open':''}><summary class="phase-title"><span class="phase-num">PHASE ${pi+1}</span><h3>${p[0]}</h3></summary><ul class="topic-list">${items.map(x=>`<li class="topic ${state.topics[x.id]?'done':''}"><input type="checkbox" data-id="${x.id}" id="${x.id}" ${state.topics[x.id]?'checked':''}><label for="${x.id}"><span>${x.t}</span></label></li>`).join('')}</ul></details>`});
+ if(!phasesHtml)return;let count=allTopics().filter(t=>t.subject===s.key&&state.topics[t.id]).length,total=allTopics().filter(t=>t.subject===s.key).length,pct=Math.round(count/total*100);
+ card.innerHTML=`<div class="subject-head"><div><h2>${s.name}</h2><p>${s.phases.length} phases · ${count}/${total} topics done</p></div><div class="percent">${pct}%</div></div><div class="bar" style="margin:0;border-radius:0"><i style="width:${pct}%;background:${({physics:'var(--blue)',chemistry:'var(--green)',biology:'var(--purple)',english:'var(--yellow)'})[s.key]}"></i></div>${phasesHtml}`;root.appendChild(card);
+ });if(!root.children.length)root.innerHTML='<div class="panel empty">No topics match those filters.</div>';
+ root.querySelectorAll('input[type=checkbox][data-id]').forEach(cb=>cb.addEventListener('change',e=>{state.topics[e.target.dataset.id]=e.target.checked;persist();render()}));renderStats();}
+function renderStats(){const topics=allTopics(),done=topics.filter(t=>state.topics[t.id]).length,pct=Math.round(done/topics.length*100);document.getElementById('overallPct').textContent=pct+'%';document.getElementById('overallBar').style.width=pct+'%';document.getElementById('doneCount').textContent=`${done} / ${topics.length}`;document.getElementById('remaining').textContent=`${topics.length-done} topics left`;
+ const counts=roadmap.map(s=>({name:s.name,count:topics.filter(t=>t.subject===s.key&&state.topics[t.id]).length,total:topics.filter(t=>t.subject===s.key).length})).sort((a,b)=>b.count/b.total-a.count/a.total);document.getElementById('strongest').textContent=counts[0].count?counts[0].name:'—';
+ const date=document.getElementById('logDate').value||today();const log=state.logs[date]||{};document.getElementById('todayMins').textContent=Number(log.minutes||0)}
+function today(){return new Date().toLocaleDateString('en-CA')}
+function renderWeeks(){document.getElementById('weeks').innerHTML=weeks.map((w,i)=>`<label class="week"><input type="checkbox" data-week="${i}" ${state.weeks[i]?'checked':''}><span><strong>${w[0]}</strong><small>${w[1]}</small></span></label>`).join('');document.querySelectorAll('[data-week]').forEach(cb=>cb.addEventListener('change',e=>{state.weeks[e.target.dataset.week]=e.target.checked;persist()}))}
+function fillLog(){const d=document.getElementById('logDate').value||today(),l=state.logs[d]||{};document.getElementById('logMinutes').value=l.minutes??'';document.getElementById('logQuestions').value=l.questions??'';document.getElementById('logSubject').value=l.subject||'Physics';document.getElementById('logWeak').value=l.weak||'';document.getElementById('logNote').value=l.note||'';renderStats()}
+document.getElementById('search').addEventListener('input',render);document.getElementById('subjectFilter').addEventListener('change',render);document.getElementById('statusFilter').addEventListener('change',render);
+document.getElementById('expandBtn').addEventListener('click',()=>{expanded=!expanded;document.getElementById('expandBtn').textContent=expanded?'Collapse all':'Expand all';render()});
+document.getElementById('logDate').value=today();document.getElementById('logDate').addEventListener('change',fillLog);
+document.getElementById('saveLog').addEventListener('click',()=>{const d=document.getElementById('logDate').value||today();state.logs[d]={minutes:Number(document.getElementById('logMinutes').value||0),questions:Number(document.getElementById('logQuestions').value||0),subject:document.getElementById('logSubject').value,weak:document.getElementById('logWeak').value,note:document.getElementById('logNote').value};persist();document.getElementById('logSaved').textContent='Saved ✓';});
+document.getElementById('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='mission-nda-2027-progress.json';a.click();URL.revokeObjectURL(url)});
+document.getElementById('importBtn').addEventListener('click',()=>document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const v=JSON.parse(await f.text());if(!v.topics||!v.logs||!v.weeks)throw Error();state=v;persist();render();renderWeeks();fillLog();alert('Progress imported successfully.')}catch(err){alert('Could not import this file. Please choose a valid Mission progress export.')}e.target.value=''});
+render();renderWeeks();fillLog();
+</script>
+</body></html>
